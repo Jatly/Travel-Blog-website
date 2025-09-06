@@ -1,0 +1,1938 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+span {
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+.sec1 {
+    background: url(back1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 36px;
+    z-index: 9999;
+    /* Make sure it's on top */
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: white;
+}
+
+header.scrolled .menu a,
+header.scrolled .h-icons {
+    color: black;
+}
+
+
+.logo {
+    height: 38px;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+/* Initially show default logo, hide scrolled logo */
+.default-logo {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.scrolled-logo {
+    opacity: 0;
+    position: absolute;
+    top: 26px;
+    /* Adjust so they overlap */
+    left: 9%;
+    /* Adjust for padding */
+    transform: translate(-50%);
+    z-index: 1;
+    pointer-events: none;
+    /* Prevent interaction */
+}
+
+/* When header is scrolled */
+header.scrolled .default-logo {
+    opacity: 0;
+    z-index: 1;
+}
+
+header.scrolled .scrolled-logo {
+    opacity: 1;
+    z-index: 2;
+}
+
+header.scrolled .menu a:hover,
+header.scrolled .h-icons i:hover {
+    color: #333;
+}
+
+
+.menu {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu a {
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.menu a:hover,
+.h-icons i:hover {
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.h-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.h-icons i {
+    cursor: pointer;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+
+
+}
+
+.her1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.her1 h2 {
+    font-size: 25px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.her1 p {
+    font-size: 22px;
+    color: white;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 300;
+}
+
+.sec {
+    width: 100%;
+    height: 85vh;
+    background: transparent;
+    border-bottom: 1.5px solid #08080821;
+    position: relative;
+}
+
+.sec2 {
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+
+
+}
+
+.left {
+    grid-column: 1/ span 1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 50px;
+    text-align: justify;
+}
+
+.left h2 {
+    font-size: 25px;
+    color: #080808;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.left>h2 span {
+    font-weight: 700;
+}
+
+.right {
+    grid-column: 2/ span 1;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.right img {
+    width: 90%;
+    height: 90%;
+}
+
+.left p {
+    font-size: 17px;
+    color: #080808;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    padding-bottom: 25px;
+}
+
+.left>p span {
+    color: #0151c1;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.g {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.gh {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid transparent;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+
+}
+
+.ne {
+    width: 100%;
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    border-bottom: 1.5px solid #08080821;
+    position: relative;
+}
+
+.gcard {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 50px;
+}
+
+.ne h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.ne h2>span {
+    color: #080808;
+    font-weight: 600;
+}
+
+.ne p {
+    color: #333;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.ne p>span {
+    color: #0151c1;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.item1 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/12/15/18/24/winter-4697776_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: 1/1/span 2/span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.item2 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2021/08/02/20/54/nature-6517866_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 1/span 2;
+    grid-column: 3/span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.item3 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2013/08/28/00/54/field-176602_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 3/span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.item4 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2017/09/13/10/33/zermatt-2745144_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 3/span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.item5 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2021/12/01/20/23/river-6839095_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 3/span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.item6 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/07/16/20/48/dolomiti-4342572_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 3/span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.item1,
+.item2 {
+    font-size: 21.5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.item3,
+.item4,
+.item5,
+.item6 {
+    font-size: 16.5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.card-4 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    position: relative;
+    border-bottom: 1.5px solid #08080821;
+
+}
+
+.card-4 h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.card-4 h2>span {
+    color: #080808;
+    font-weight: 600;
+}
+
+.card-4 p {
+    color: #333;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.card-4 p>span {
+    color: #0151c1;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.four {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.card1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2012/06/24/18/20/reservoir-50681_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/09/23/16/43/alley-1690053_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2024/04/20/15/00/moutains-8708801_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2018/10/11/17/29/river-3740371_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.four a {
+    font-size: 16.5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.four p {
+    color: #f8f8f8;
+}
+
+.coo {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    position: relative;
+    border-bottom: 1.5px solid #08080821;
+}
+
+.coo h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.coo h2>span {
+    color: #080808;
+    font-weight: 600;
+}
+
+.coo p {
+    color: #333;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.coo p>span {
+    color: #0151c1;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.five {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.block1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/10/27/09/04/iceland-4581129_1280.jpg);
+    background-size: cover;
+    grid-column: 1/span 3;
+    grid-row: 1 /span 8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.block1 h3 {
+    width: 70%;
+    font-size: 23px;
+    font-weight: 400;
+    color: #f8f8f8;
+    letter-spacing: 1px;
+}
+
+.block1 h3>span {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.block1 button {
+    width: 20%;
+    height: 10%;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+}
+
+.block1 button:hover {
+    background-color: white;
+    color: #080808;
+    border-color: transparent;
+}
+
+.block2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    grid-row: 1/span 2;
+    grid-column: 4/span 2;
+}
+
+.block3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 3 /span 2;
+    grid-column: 4/span 2;
+}
+
+.block4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 5 /span 2;
+    grid-column: 4/span 2;
+}
+
+.block5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 7 /span 2;
+    grid-column: 4/span 2;
+}
+
+.five a>img {
+    width: 25%;
+    height: 100%;
+
+}
+
+.five a {
+    text-decoration: none;
+    color: #080808;
+    background: #f8f8f8;
+    font-size: 15px;
+    text-align: left;
+    padding-right: 20px;
+    gap: 20px;
+}
+
+.five a:hover {
+    color: #0151c1;
+    font-weight: 500;
+}
+
+.block2,
+.block3,
+.block4,
+.block5 {
+    position: relative;
+}
+
+.lay {
+    width: 24%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #f8f8f8;
+    background-color: rgba(2, 2, 2, 0.2);
+    z-index: 111;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.five a:hover .lay,
+.five a:hover .lay2 {
+    display: flex;
+}
+
+.rd1,
+.rd2,
+.rd3,
+.rd4 {
+    background-color: lightseagreen;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.rd1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2014/09/21/17/56/mountaineering-455338_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.rd2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2020/04/17/20/25/road-5056788_1280.jpg);
+    background-size: cover;
+}
+
+.rd3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2017/05/30/04/00/in-yunnan-province-2355690_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.rd4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/12/15/07/54/horseshoe-bend-1908283_1280.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.five {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.bl1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2017/04/20/05/40/united-kingdom-2244625_1280.jpg);
+    background-size: cover;
+    grid-column: 3 / span 4;
+    /* Now on the right */
+    grid-row: 1 / span 8;
+    /* Takes up full height */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+/* Move other blocks to the left side */
+.bl2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}
+
+.bl3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 2;
+}
+
+.bl4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 5 / span 2;
+    grid-column: 1 / span 2;
+}
+
+.bl5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 7 / span 2;
+    grid-column: 1 / span 2;
+}
+
+.bl5,
+.bl2,
+.bl3,
+.bl4 {
+    position: relative;
+}
+
+.lay2 {
+    width: 24%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(2, 2, 2, 0.2);
+}
+
+.bl1 h3 {
+    width: 80%;
+    font-size: 23px;
+    font-weight: 400;
+    color: #f8f8f8;
+    letter-spacing: 1px;
+}
+
+.bl1 h3>span {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.bl1 button {
+    width: 20%;
+    height: 10%;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all 0.5s ease-in;
+}
+
+.bl1 button:hover {
+    background-color: white;
+    color: #080808;
+    border-color: transparent;
+}
+
+.ca1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2025/03/31/21/30/italy-9505450_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ca2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2022/06/19/06/15/austria-7271119_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ca3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2020/02/05/09/31/city-4820579_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ca4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/06/06/13/36/italy-4256018_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.imgal {
+    width: 100%;
+    height: 100vh;
+    background-color: #080808;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: #f8f8f8;
+}
+
+.gallary1 {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 50px;
+    border-radius: 10px;
+
+
+}
+
+.it1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2021/07/16/09/54/travel-6470467_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it1:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2021/07/16/09/54/travel-6470467_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2017/09/04/16/58/passport-2714675_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it2:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2017/09/04/16/58/passport-2714675_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2019/09/30/14/51/squirrel-4515962_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it3:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/09/30/14/51/squirrel-4515962_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2018/09/09/22/25/bremen-3665704_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it4:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2018/09/09/22/25/bremen-3665704_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2014/03/05/10/45/herd-of-elephants-279979_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it5:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2014/03/05/10/45/herd-of-elephants-279979_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it6 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2022/10/04/23/33/mountains-7499281_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it6:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2022/10/04/23/33/mountains-7499281_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it7 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2020/08/09/12/07/man-5475371_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it7:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2020/08/09/12/07/man-5475371_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it8 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/11/18/15/58/vw-1835506_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it8:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/11/18/15/58/vw-1835506_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.it1,
+.it2,
+.it3,
+.it4,
+.it5,
+.it6,
+.it7,
+.it8 {
+    text-decoration: none;
+    color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 35vh;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 0.5px solid #08080821;
+
+}
+
+footer img {
+    width: 10%;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+footer p:hover {
+    color: #0151c1;
+    text-decoration: underline;
+}
+
+footer h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: peru;
+}
+
+.fr {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.end {
+    width: 100%;
+    height: 5vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.end p {
+    font-size: 14px;
+    color: #080808;
+    cursor: pointer;
+}
+
+.f-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #080808a9;
+}
+
+.f-icons i:hover {
+    color: black;
+
+}
+
+.pl:hover .ho {
+    display: flex;
+}
+
+.ho {
+    width: 90%;
+    height: 60vh;
+    background-color: #f8f8f8;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ho1,
+.ho2,
+.ho3,
+.ho4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    color: #080808;
+    border-right: 0.5px solid #08080821;
+}
+
+.ho4 {
+    border: none;
+}
+
+.ho1 h4,
+.ho2 h4,
+.ho3 h4,
+.ho4 h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.ho1 p,
+.ho2 p,
+.ho3 p,
+.ho4 p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #080808;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.ho1 p:hover,
+.ho2 p:hover,
+.ho3 p:hover,
+.ho4 p:hover {
+    color: #bbb;
+}
+
+.ex {
+    width: 15%;
+    height: 50vh;
+    background-color: #f8f8f8;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px;
+    position: absolute;
+    top: 58px;
+    left: 52%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ex a {
+    text-decoration: none;
+    color: #080808;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.exp:hover .ex {
+    display: flex;
+
+}
+
+.ex a:hover {
+    color: #bbb;
+}
+
+.b2 {
+
+    width: 12%;
+    height: 20vh;
+    background-color: #f8f8f8;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px;
+    position: absolute;
+    top: 58px;
+    left: 62%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.b:hover .b2 {
+    display: flex;
+}
+
+.b2 p {
+    text-decoration: none;
+    color: #080808;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.b2 p:hover {
+    color: #bbb;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+@media screen and(max-width: 600px){
+    /* ========== Base Reset ========== */
+
+
+
+/* ========== General Styles ========== */
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p,
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+
+}
+
+p {
+    padding: 20px;
+}
+
+.fr p {
+    padding: 0px;
+}
+
+.fr p:hover {
+    color: #0151c1;
+    text-decoration: underline;
+}
+
+span {
+    color: #0151c1;
+    font-weight: 600;
+}
+
+/* ========== Header ========== */
+header {
+    position: sticky;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    max-width: 140px;
+    margin-bottom: 10px;
+}
+
+header.scrolled {
+    background: white;
+}
+
+header .scrolled-logo {
+    display: none;
+}
+
+header.scrolled .default-logo {
+    display: none;
+}
+
+header.scrolled .scrolled-logo {
+    display: block;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    display: none;
+}
+
+.menu a {
+    font-size: 14px;
+    color: #333;
+
+}
+
+.h-icons i:hover {
+    color: black;
+}
+
+/* ========== Hero Section ========== */
+.sec1 .hero {
+    height: 500px;
+    background: url(back1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.her1 h2 {
+    font-size: 24px;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+.her1 p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.her1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: -20px;
+}
+
+/* ========== About Section ========== */
+.sec2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec2 p {
+    padding: 5px;
+    text-align: justify;
+
+}
+
+.sec2 .right img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ========== Section Titles ========== */
+section h2 {
+    font-size: 22px;
+    text-align: center;
+    padding: 20px 10px 10px;
+}
+
+/* ========== Cards & Links ========== */
+.gcard,
+.four,
+.five {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.gcard a,
+.four a,
+.five a {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.four a {
+    min-height: 250px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5;
+}
+
+.rd1 {
+    width: 95%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2014/09/21/17/56/mountaineering-455338_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.rd2 {
+    width: 95%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2020/04/17/20/25/road-5056788_1280.jpg);
+    background-size: cover;
+}
+
+.rd3 {
+    width: 95%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2017/05/30/04/00/in-yunnan-province-2355690_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.rd4 {
+    width: 95%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/12/15/07/54/horseshoe-bend-1908283_1280.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.ca1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2025/03/31/21/30/italy-9505450_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ca2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2022/06/19/06/15/austria-7271119_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ca3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2020/02/05/09/31/city-4820579_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ca4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/06/06/13/36/italy-4256018_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.gcard {
+    height: 100vh;
+    color: #f5f5f5;
+    gap: 20px;
+}
+
+
+.card1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2012/06/24/18/20/reservoir-50681_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/09/23/16/43/alley-1690053_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2024/04/20/15/00/moutains-8708801_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2018/10/11/17/29/river-3740371_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.gcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1 {
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/12/15/18/24/winter-4697776_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.item2 {
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2021/08/02/20/54/nature-6517866_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 1/span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.item3 {
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2013/08/28/00/54/field-176602_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.item4 {
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2017/09/13/10/33/zermatt-2745144_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.item5 {
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2021/12/01/20/23/river-6839095_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.item6 {
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/07/16/20/48/dolomiti-4342572_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ========== Featured Image Blocks ========== */
+.five a img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.lay,
+.lay2 {
+    display: none;
+}
+
+/* ========== Section Navigation (Down Arrow) ========== */
+.gh {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gh .g {
+    font-size: 20px;
+    color: #0151c1;
+}
+
+/* ========== Button Style ========== */
+button {
+    background-color: #0151c1;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* ========== Footer ========== */
+footer {
+    background: #f5f5f5;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+footer img {
+    max-width: 120px;
+    margin: auto;
+}
+
+.fr {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fr div h4 {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.end {
+    background-color: #ddd;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.end p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.f-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+/* ========== Gallery Section ========== */
+.imgal {
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.imgal h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.gallary1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallary1 a {
+    padding: 8px 12px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.gallary1 a:hover {
+    background-color: #0151c1;
+    color: #f5f5f5;
+}
+
+.four a {
+    font-size: 25px;
+    font-weight: 600;
+}
+    
+}
+/* ------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 601px) and (max-width: 1199px) {
+  
+  /* Header adjustments */
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
+  .menu {
+    width: 100%;
+    order: 2;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .h-icons {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  /* Hero content */
+  .her1 h2 {
+    font-size: 28px;
+  }
+  .her1 p {
+    font-size: 20px;
+  }
+
+  /* Two-column section stacking vertically */
+  .sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left, .right {
+    width: 90%;
+    padding: 15px 0;
+  }
+  .right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Card grids: 2 columns for better readability */
+ .gcard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .gcard .card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
+  }
+
+  .gcard .card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    z-index: 1;
+  }
+
+  .gcard .card p {
+    position: relative;
+    z-index: 2;
+    padding: 12px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .four {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Timeline-style blocks: vertical stacking */
+  .five {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+  .block1, .bl1 {
+    width: 100%;
+  }
+  .block2, .block3, .block4, .block5,
+  .bl2, .bl3, .bl4, .bl5 {
+    width: 100%;
+  }
+  .five a > img {
+    width: 100%;
+    height: 50%;
+  }
+
+  /* Blog and city card grids: keep consistent 2-column flow */
+  .card-4 .four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .coo .five {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery section: 2 columns */
+  .gallary1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .gallary1 a {
+    font-size: 15px;
+  }
+
+  /* Footer stacking for usability */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .fr {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .end {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+}
+
